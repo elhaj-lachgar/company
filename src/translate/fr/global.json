@@ -1,0 +1,29 @@
+{
+    "banner": {
+        "title": "Nous Sommes ",
+        "description": "Un partenaire technique fiable pour construire des produits numériques innovants de classe mondiale, alimentés par des technologies de pointe."
+    },
+    "company": {
+        "title": "La société",
+        "firstText": "Nous aspirons à être le partenaire technique de choix dans l'industrie du développement logiciel. Notre capacité à résoudre différents problèmes numériques grâce à notre expertise technique de pointe, notre approche agile et notre stricte conformité aux délais et budgets nous permettent de forger des partenariats à long terme. Veuillez lire ci-dessous les témoignages de nos clients et partenaires satisfaits.",
+        "secondText": " Nous ne proposons pas seulement des solutions de haute qualité et rentables de classe mondiale, mais aussi un partenariat technique pour vous soutenir à long terme.",
+        "lastText": "Choisissez-nous comme votre partenaire technique pour lancer votre prochain projet innovant. Contactez-nous et bénéficiez d'une consultation de projet gratuite.",
+        "normalText": "Notre mission"
+    },
+    "capabilities": {
+        "title": "Nos Capacités",
+        "description": "Nous sommes également une équipe de développeurs et d'architectes compétents. Nous poussons constamment nos compétences vers l'avant pour maintenir un savoir-faire de pointe et ainsi fournir les meilleures solutions adaptées aux besoins spécifiques de chaque client."
+    },
+    "services": {
+        "title": "Nos Services"
+    },
+    "projects": {
+        "title": "projets"
+    },
+    "element": {
+        "btn": "En Savoir Plus",
+        "title": "Titre du Service",
+        "prtitle": "Titre du Projet"
+    },
+    "value": "fr"
+}

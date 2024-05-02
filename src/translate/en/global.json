@@ -1,0 +1,29 @@
+{
+    "banner": {
+        "title": "We are",
+        "description": "A reliable technical partner to build world-class innovative digital products powered by cutting-edge technologies"
+    },
+    "company": {
+        "title": "The Company",
+        "firstText": " is to be a technical partner of choice in the software development industry. Our ability to solve different digital problems with our technical know-how in state-of-the-art, our lean/agile approach and our strict compliance with deadlines and budgets enables us to forg long-term partnerships. Please read below the testimonials of our happy clients and partners.",
+        "secondText": " We do not offer world-class high quality cost-effective solutions only but a technical partnership to support you in the long run as well.",
+        "lastText": "Choose us to be your technical partner to launch your next innovative project. Get in touch with us and get a free project consultation.",
+        "normalText": "Our mission"
+    },
+    "capabilities": {
+        "title": "Our Capabilities",
+        "description": "is also a team of skilled developers and architects. We are constantly pushing our skills forward to keep sharp know-how in state-of-the-art and therefore provide the best solutions to fit each client's specific requirements."
+    },
+    "services" : {
+        "title" : "Our Services"
+    },
+    "projects" :{
+        "title" : "projects"
+    },
+    "element" :{
+        "btn" : "Read More",
+        "title" : "Title of Service",
+        "prtitle" : "Title of Project"
+    },
+    "value" : "en"
+}

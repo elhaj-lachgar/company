@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-border-dark {
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+      -1px 1px white;
+  }
+
+  .text-border-blue-2 {
+    text-shadow: 2px 2px 0 #008FD5, -2px -2px 0 #008FD5, 2px -2px 0 #008FD5,
+      -2px 2px 0 #008FD5;
+  }
+
+  
+  .text-border-blue-1 {
+    text-shadow: 0.5px 0.5px 0 #008FD5, -0.5px -0.5px 0 #008FD5, 0.5px -0.5px 0 #008FD5,
+      -0.5px 0.5px 0 #008FD5;
+  }
+
+  .text-border-light {
+    text-shadow: 1px 1px 0 rgb(229 231 235), -1px -1px 0 rgb(229 231 235),
+      1px -1px 0 rgb(229 231 235), -1px 1px rgb(229 231 235);
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .text-border-dark-optional {
+    text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white,
+      -2px 2px white;
+  }
+}
