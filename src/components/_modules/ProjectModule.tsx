@@ -25,7 +25,7 @@ function ProjectModule({ project }: { project: TProject }) {
         <ModalOverlay />
         <ModalContent>
           <div className="flex justify-between px-5 py-4 text-lg font-medium h-fit">
-            {project.name}
+            {project.name[lg]}
             <X
               className="text-white bg-red-500 rounded-md w-7 h-7 cursor-pointer"
               onClick={onClose}
@@ -44,21 +44,33 @@ function ProjectModule({ project }: { project: TProject }) {
               <h2 className="text-xl font-semibold">
                 {t("element.prtitle")} :
               </h2>
-              <h2 className="w-full font-medium ">{project.name}</h2>
+              <h2 className="w-full font-medium ">{project.name[lg]}</h2>
             </div>
             <div className="flex flex-col gap-y-1 w-full">
               <h2 className="text-xl font-semibold">
-                Description of Project :
+                Description :
               </h2>
               <div className="overflow-auto italic no-scrollbar  border  p-2 bg-gray-100 rounded-xl  ">
                 - {" " + project.description[lg]}
               </div>
             </div>
           </div>
-          {project.valid && (
+          {project.details && (
             <ModalFooter gap={2}>
-              <Button colorScheme="blue">See Code</Button>
-              <Button colorScheme="green">Visite</Button>
+              <a
+                href={project.details.viste}
+                className="p-2 rounded  bg-blue-500 text-white "
+                target="_blank"
+              >
+                Viste
+              </a>
+              <a
+                href={project.details.code}
+                className="p-2 bg-green-500 rounded text-white "
+                target="_blank"
+              >
+                See Code
+              </a>
             </ModalFooter>
           )}
         </ModalContent>

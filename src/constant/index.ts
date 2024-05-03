@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, TwitterIcon } from "lucide-react";
+
 
 export const NAV_BAR_ITEMS = [
   {
@@ -150,44 +150,63 @@ export const SERVICE_ITEMS = [
   },
 ];
 
-export const Social = [Facebook, Mail, Linkedin, Instagram, TwitterIcon];
 
 export const PROJECT_ITEMS = [
   {
-    name: "Book Store",
+    name: {
+      en : "Book Store" ,
+      fr : "Boutique des Livres"
+    },
     description: {
       fr: "Ce projet est une librairie en ligne où vous pouvez acheter et vendre vos livres avec paiement en ligne, ainsi qu'un tableau de bord pour l'administrateur afin de contrôler le site web.",
       en: "this project is book store where you can buy and sell your books with payment  online and dashbord for admin to controll website",
     },
     img: "/projects/book.png",
-    valid: true,
+    details: {
+      viste: "https://front-end-book-store.vercel.app",
+      code: "",
+    },
   },
   {
-    name: "Plante Store",
+    name: {
+      en :  "Plante Store",
+      fr : "Boutique de Plantes"
+    },
     description: {
       fr: "Ce projet est une boutique en ligne de plantes où vous pouvez acheter et vendre vos plantes avec paiement en ligne, ainsi qu'un tableau de bord pour l'administrateur afin de contrôler le site web.",
       en: "this project is plante store where you can buy and sell your plante with payment  online and dashbord for admin to controll website",
     },
     img: "/projects/plante.png",
-    valid: true,
+    details: {
+      viste: "https://frontend-plante-store.vercel.app",
+      code: "",
+    },
   },
   {
-    name: "Video Discovered",
+    name: {
+      en : "Video Discovered",
+      fr : "Découverte De Vidéos"
+    },
     description: {
       fr: "Ce projet est une plateforme de découverte de vidéos où vous pouvez trouver et regarder des vidéos de YouTube en utilisant l'authentification Google.",
       en: "This project is video discovered where you can find and watch video from youtobe with google authentication",
     },
     img: "/projects/video.png",
-    valid: true,
+    details: {
+      viste: "",
+      code: "",
+    },
   },
   {
-    name: "VPN",
+    name: {
+      en : "VPN",
+      fr: "VPN",
+    },
     description: {
       fr: "Sécurisez votre réseau avec notre projet VPN pfSense/OpenVPN. Protégez vos données sensibles et accédez-y de manière sécurisée à distance. Expertise garantie pour une mise en place fiable et efficace.",
       en: "Secure your network with our pfSense/OpenVPN VPN project. Protect your sensitive data and securely access it remotely. Guaranteed expertise for reliable and efficient implementation.",
     },
     img: "/capabilities/tele.png",
-    valid: false,
   },
 ];
 
@@ -203,14 +222,14 @@ export const CAPABILITIE_ITEMS = [
 export const Default_Social = [
   {
     img: "/icons/social.png",
-    href : "mailto:brothertech643@gmail.com"
+    href: "mailto:brothertech643@gmail.com",
   },
   {
     img: "/icons/whatsapp.png",
-    href : "https://api.whatsapp.com/message/V7AJA34VZAEGC1?autoload=1&app_absent=0"
+    href: "https://api.whatsapp.com/message/V7AJA34VZAEGC1?autoload=1&app_absent=0",
   },
   {
-    img : '/icons/telephone.png',
-    href : "tel:+212624568923"
-  }
+    img: "/icons/telephone.png",
+    href: "tel:+212624568923",
+  },
 ];

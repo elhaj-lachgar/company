@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import OurWork from "./components/OurServices";
 import Projects from "./components/Projects";
-import {ArrowUp} from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 function App() {
   const [scrollTop, setScrollTop] = useState(false);
@@ -42,7 +42,7 @@ function App() {
             className="fixed top-[80%]  cursor-pointer flex items-center justify-center right-[3%] w-11 h-11 rounded-full bg-blue-700 text-white"
             onClick={scrollTopHandler}
           >
-            <ArrowUp/>
+            <ArrowUp />
           </div>
         )}
       </div>

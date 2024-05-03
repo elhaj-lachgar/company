@@ -1,7 +1,7 @@
 export type TService = {
   name: {
-    fr : string;
-    en : string;
+    fr: string;
+    en: string;
   };
   img: string;
   description: {
@@ -11,11 +11,17 @@ export type TService = {
 };
 
 export type TProject = {
-  name: string;
+  name:{
+    fr: string;
+    en: string;
+  };
   description: {
-    fr : string;
-    en : string;
+    fr: string;
+    en: string;
   };
   img: string;
-  valid: boolean;
+  details?: {
+    viste: string;
+    code: string;
+  };
 };
