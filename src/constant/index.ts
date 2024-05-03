@@ -1,5 +1,3 @@
-
-
 export const NAV_BAR_ITEMS = [
   {
     link: "#home",
@@ -150,12 +148,11 @@ export const SERVICE_ITEMS = [
   },
 ];
 
-
 export const PROJECT_ITEMS = [
   {
     name: {
-      en : "Book Store" ,
-      fr : "Boutique des Livres"
+      en: "Book Store",
+      fr: "Boutique des Livres",
     },
     description: {
       fr: "Ce projet est une librairie en ligne où vous pouvez acheter et vendre vos livres avec paiement en ligne, ainsi qu'un tableau de bord pour l'administrateur afin de contrôler le site web.",
@@ -169,8 +166,8 @@ export const PROJECT_ITEMS = [
   },
   {
     name: {
-      en :  "Plante Store",
-      fr : "Boutique de Plantes"
+      en: "Plante Store",
+      fr: "Boutique de Plantes",
     },
     description: {
       fr: "Ce projet est une boutique en ligne de plantes où vous pouvez acheter et vendre vos plantes avec paiement en ligne, ainsi qu'un tableau de bord pour l'administrateur afin de contrôler le site web.",
@@ -184,8 +181,8 @@ export const PROJECT_ITEMS = [
   },
   {
     name: {
-      en : "Video Discovered",
-      fr : "Découverte De Vidéos"
+      en: "Video Discovered",
+      fr: "Découverte De Vidéos",
     },
     description: {
       fr: "Ce projet est une plateforme de découverte de vidéos où vous pouvez trouver et regarder des vidéos de YouTube en utilisant l'authentification Google.",
@@ -199,7 +196,7 @@ export const PROJECT_ITEMS = [
   },
   {
     name: {
-      en : "VPN",
+      en: "VPN",
       fr: "VPN",
     },
     description: {
@@ -211,17 +208,18 @@ export const PROJECT_ITEMS = [
 ];
 
 export const CAPABILITIE_ITEMS = [
-  { name: "React.js", img: "/capabilities/react.png" },
+  { name: "React.js", img: "/capabilities/physics.png" },
   { name: "Next.js", img: "/capabilities/next.png" },
-  // { name: "Node.js", img: "/capabilities/node.png" },
+  { name: "Node.js", img: "/capabilities/programing.png" },
   // { name: "Express.js", img: "/capabilities/express.png" },
   { name: "Socket.io", img: "/capabilities/socket.png" },
   { name: "Azure", img: "/capabilities/azure.png" },
+  { name: "Aws", img: "/capabilities/social.png" },
 ];
 
 export const Default_Social = [
   {
-    img: "/icons/social.png",
+    img: "/icons/email.png",
     href: "mailto:brothertech643@gmail.com",
   },
   {

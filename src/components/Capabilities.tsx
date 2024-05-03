@@ -17,12 +17,11 @@ function Capabilities() {
       <div className="flex flex-wrap gap-8 justify-center mt-10 md:mt-20  md:w-3/4 lg:w-1/2">
         {CAPABILITIE_ITEMS.map((item) => (
           <div className="flex cursor-pointer  flex-col gap-y-1 justify-center items-center text-gray-800 font-semibold">
-            <div className="  rounded-full w-16 h-16 border">
-              <img
-                src={item.img}
-                className={` object-cover   rounded-full w-16 h-16 bg-gray-500`}
-              />
-            </div>
+            <img
+              src={item.img}
+              className={` object-cover  bg-white rounded-full w-20 h-20 `}
+            />
+
             {item.name}
           </div>
         ))}
