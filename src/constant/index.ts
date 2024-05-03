@@ -161,7 +161,7 @@ export const PROJECT_ITEMS = [
     img: "/projects/book.png",
     details: {
       viste: "https://front-end-book-store.vercel.app",
-      code: "",
+      code: "https://github.com/elhaj-lachgar/front-end-book-store",
     },
   },
   {
@@ -176,7 +176,7 @@ export const PROJECT_ITEMS = [
     img: "/projects/plante.png",
     details: {
       viste: "https://frontend-plante-store.vercel.app",
-      code: "",
+      code: "https://github.com/elhaj-lachgar/frontend-plante-store",
     },
   },
   {
@@ -190,8 +190,8 @@ export const PROJECT_ITEMS = [
     },
     img: "/projects/video.png",
     details: {
-      viste: "",
-      code: "",
+      viste: "https://video-search-kappa.vercel.app/",
+      code: "https://github.com/elhaj-lachgar/video-search",
     },
   },
   {
@@ -211,7 +211,6 @@ export const CAPABILITIE_ITEMS = [
   { name: "React.js", img: "/capabilities/physics.png" },
   { name: "Next.js", img: "/capabilities/next.png" },
   { name: "Node.js", img: "/capabilities/programing.png" },
-  // { name: "Express.js", img: "/capabilities/express.png" },
   { name: "Socket.io", img: "/capabilities/socket.png" },
   { name: "Azure", img: "/capabilities/azure.png" },
   { name: "Aws", img: "/capabilities/social.png" },
