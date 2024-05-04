@@ -28,25 +28,23 @@ function App() {
   };
 
   return (
-    <main>
-      <div ref={top} className="flex flex-col relative">
-        <Navbar />
-        <Banner />
-        <Company />
-        <Capabilities />
-        <OurWork />
-        <Projects />
-        <Footer />
-        {scrollTop && (
-          <div
-            className="fixed top-[80%]  cursor-pointer flex items-center justify-center right-[3%] w-11 h-11 rounded-full bg-blue-700 text-white"
-            onClick={scrollTopHandler}
-          >
-            <ArrowUp />
-          </div>
-        )}
-      </div>
-    </main>
+    <div ref={top} className="flex flex-col relative">
+      <Navbar />
+      <Banner />
+      <Company />
+      <Capabilities />
+      <OurWork />
+      <Projects />
+      <Footer />
+      {scrollTop && (
+        <div
+          className="fixed top-[80%]  cursor-pointer flex items-center justify-center right-[3%] w-11 h-11 rounded-full bg-blue-700 text-white"
+          onClick={scrollTopHandler}
+        >
+          <ArrowUp />
+        </div>
+      )}
+    </div>
   );
 }
 

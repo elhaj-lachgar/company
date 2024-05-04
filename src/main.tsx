@@ -12,7 +12,7 @@ import { I18nextProvider } from "react-i18next";
 i18next.init({
   interpolation: {
     escapeValue: true,
-  },
+  }, 
   lng: "en",
   resources: {
     en: {

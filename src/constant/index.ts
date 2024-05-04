@@ -214,13 +214,21 @@ export const CAPABILITIE_ITEMS = [
   { name: "Socket.io", img: "/capabilities/socket.png" },
   { name: "Azure", img: "/capabilities/azure.png" },
   { name: "Aws", img: "/capabilities/social.png" },
-  {name : "Mongodb", img:"/capabilities/mongoodb.png" },
+  { name: "Mongodb", img: "/capabilities/mongoodb.png" },
 ];
 
 export const Default_Social = [
   {
+    img: "/icons/instagram.png",
+    href: "https://www.instagram.com/brotherstech024?igsh=MXhiMHlubWh2bDQxaQ==",
+  },
+  {
     img: "/icons/email.png",
     href: "mailto:brothertech643@gmail.com",
+  },
+  {
+    img: "/icons/communication.png",
+    href: "https://www.facebook.com/groups/353027434449874",
   },
   {
     img: "/icons/whatsapp.png",

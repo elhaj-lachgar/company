@@ -15,7 +15,7 @@ function Footer() {
         >
           Brothers Tech
         </h1>
-        <div className="flex gap-x-8 items-center">
+        <div className="flex gap-x-4 lg:gap-x-8 items-center">
           {Default_Social.map((ele) => (
             < a href={ele.href} key={ele.href}  target="_blank">
               <img
