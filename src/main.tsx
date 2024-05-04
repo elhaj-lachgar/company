@@ -10,9 +10,19 @@ import i18next from "i18next";
 import { I18nextProvider } from "react-i18next";
 
 i18next.init({
-  interpolation: { escapeValue: true },
+  interpolation: {
+    escapeValue: true,
+  },
   lng: "en",
-  resources: { en: { global: en }, fr: { global: fr } },
+  resources: {
+    en: {
+      global: en,
+    },
+
+    fr: {
+      global: fr,
+    },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

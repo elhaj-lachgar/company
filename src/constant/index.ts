@@ -214,6 +214,7 @@ export const CAPABILITIE_ITEMS = [
   { name: "Socket.io", img: "/capabilities/socket.png" },
   { name: "Azure", img: "/capabilities/azure.png" },
   { name: "Aws", img: "/capabilities/social.png" },
+  {name : "Mongodb", img:"/capabilities/mongoodb.png" },
 ];
 
 export const Default_Social = [

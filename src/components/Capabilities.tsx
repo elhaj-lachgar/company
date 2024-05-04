@@ -19,7 +19,7 @@ function Capabilities() {
           <div className="flex cursor-pointer  flex-col gap-y-1 justify-center items-center text-gray-800 font-semibold">
             <img
               src={item.img}
-              className={` object-cover  bg-white rounded-full w-20 h-20 `}
+              className={` object-cover  bg-white w-16 h-16 lg:w-20 lg:h-20  `}
             />
 
             {item.name}
