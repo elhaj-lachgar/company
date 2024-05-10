@@ -215,6 +215,10 @@ export const CAPABILITIE_ITEMS = [
   { name: "Azure", img: "/capabilities/azure.png" },
   { name: "Aws", img: "/capabilities/social.png" },
   { name: "Mongodb", img: "/capabilities/mongoodb.png" },
+  {name : "Open VPN", img: "/capabilities/openvpn_104297 (1).png"},
+  { name : "Linx"  , img : "/capabilities/linux_original_logo_icon_146433.png"},
+  {name : "VMware" , img : "/capabilities/VMware_23516.png"},
+  {name : "Windows Server" , img : "/capabilities/windows_icon-icons.com_62797.png"}
 ];
 
 export const Default_Social = [
