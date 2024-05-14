@@ -14,7 +14,7 @@ function ProjectModule({ project }: { project: TProject }) {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const [t] = useTranslation("global");
 
-  const lg: "en" | "fr" = t("value");
+  const lg: "en" | "fr" | 'ar' = t("value");
 
   return (
     <>
@@ -48,7 +48,7 @@ function ProjectModule({ project }: { project: TProject }) {
             </div>
             <div className="flex flex-col gap-y-1 w-full">
               <h2 className="text-xl font-semibold">
-                Description :
+              {t("element.prdesc")} :
               </h2>
               <div className="overflow-auto italic no-scrollbar  border  p-2 bg-gray-100 rounded-xl  ">
                 - {" " + project.description[lg]}
@@ -59,17 +59,17 @@ function ProjectModule({ project }: { project: TProject }) {
             <ModalFooter gap={2}>
               <a
                 href={project.details.viste}
-                className="p-2 rounded  bg-blue-500 text-white "
+                className="p-2 rounded  bg-blue-500 text-white capitalize"
                 target="_blank"
               >
-                Viste
+                {t('element.visit')}
               </a>
               <a
                 href={project.details.code}
-                className="p-2 bg-green-500 rounded text-white "
+                className="p-2 bg-green-500 rounded text-white capitalize"
                 target="_blank"
               >
-                See Code
+                {t('element.seeCode')}
               </a>
             </ModalFooter>
           )}

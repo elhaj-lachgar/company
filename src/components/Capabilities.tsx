@@ -16,7 +16,7 @@ function Capabilities() {
       </p>
       <div className="flex flex-wrap gap-8 justify-center mt-10 md:mt-20  md:w-3/4 lg:w-1/2">
         {CAPABILITIE_ITEMS.map((item) => (
-          <div className="flex cursor-pointer  flex-col gap-y-1 justify-center items-center text-gray-800 font-semibold">
+          <div key={item.name} className="flex cursor-pointer  flex-col gap-y-1 justify-center items-center text-gray-800 font-semibold">
             <img
               src={item.img}
               className={` object-cover  bg-white w-16 h-16 lg:w-20 lg:h-20  `}

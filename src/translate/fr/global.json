@@ -23,7 +23,10 @@
     "element": {
         "btn": "En Savoir Plus",
         "title": "Titre du Service",
-        "prtitle": "Titre du Projet"
+        "prtitle": "Titre du Projet",
+        "prdesc": "description",
+        "visit": "visite",
+        "seeCode": "voir le code"
     },
     "value": "fr"
 }

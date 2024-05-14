@@ -5,12 +5,14 @@ import { AlignRight, AlignJustify } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import Flag from "react-country-flag";
 import { useTranslation } from "react-i18next";
+import { useDirectionContext } from "../context/DirectionContextProvider";
 
 function Navbar() {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
-  const [t, i18n] = useTranslation();
+  const [t, i18n] = useTranslation("global");
+  const { setDir } = useDirectionContext();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,10 +23,11 @@ function Navbar() {
     return () => window.removeEventListener("scroll", () => {});
   }, []);
 
-  const changeLanguages = (lg: "en" | "fr") => {
-    console.log(t('value'))
-    i18n.changeLanguage(lg);
+  const changeLanguages = (lgs: "en" | "fr" | "ar") => {
+    i18n.changeLanguage(lgs);
   };
+
+  const lg: "en" | "fr" | 'ar' = t("value");
 
   return (
     <nav
@@ -47,27 +50,42 @@ function Navbar() {
           {NAV_BAR_ITEMS.map((item) => (
             <a
               href={item.link}
-              key={item.name}
+              key={item.name.en}
               className={`font-medium ${
                 pathname == item.link
                   ? "text-[#008FD5]"
                   : `${scroll ? "text-gray-500" : "text-gray-200"}`
               } hover:text-[#008FD5]`}
             >
-              {item.name}
+              {item.name[lg]}
             </a>
           ))}
           <Flag
             svg
             countryCode="us"
             className="cursor-pointer"
-            onClick={() => changeLanguages("en")}
+            onClick={() => {
+              changeLanguages("en");
+              setDir("ltr");
+            }}
           />
           <Flag
             svg
             countryCode="fr"
             className="cursor-pointer"
-            onClick={() => changeLanguages("fr")}
+            onClick={() => {
+              changeLanguages("fr");
+              setDir("ltr");
+            }}
+          />
+          <Flag
+            svg
+            countryCode="ma"
+            className="cursor-pointer"
+            onClick={() => {
+              changeLanguages("ar");
+              setDir("rtl");
+            }}
           />
         </div>
 
@@ -88,29 +106,60 @@ function Navbar() {
       {isOpen && (
         <div className="flex px-5 md:px-10 flex-col mb-4 gap-y-3 mt-5 lg:hidden ">
           {" "}
-          {NAV_BAR_ITEMS.map((item) => (
-            <a
-              href={item.link}
-              key={item.name}
-              className={`font-medium  ${
-                pathname == item.link ? "text-blue-500" : "text-gray-950"
-              } hover:text-blue-500`}
-            >
-              {item.name}
-            </a>
-          ))}
+          {NAV_BAR_ITEMS.map((item) => {
+            console.log(t("value"))
+            console.log(item.name[lg]);
+            return (
+              <a
+                href={item.link}
+                key={item.name[lg]}
+                className={`font-medium  ${
+                  pathname == item.link ? "text-blue-500" : "text-gray-950"
+                } hover:text-blue-500`}
+              >
+                {item.name[lg]}
+              </a>
+            );
+          })}
           <div className="flex justify-end items-center gap-x-2">
             <Flag
               svg
               countryCode="us"
               className="cursor-pointer"
-              onClick={() => changeLanguages("en")}
+              style={{
+                width: "25px",
+                height: "25px",
+              }}
+              onClick={() => {
+                changeLanguages("en");
+                setDir("ltr");
+              }}
             />
             <Flag
               svg
+              style={{
+                width: "25px",
+                height: "25px",
+              }}
               countryCode="fr"
               className="cursor-pointer"
-              onClick={() => changeLanguages("fr")}
+              onClick={() => {
+                changeLanguages("fr");
+                setDir("ltr");
+              }}
+            />
+            <Flag
+              svg
+              style={{
+                width: "25px",
+                height: "25px",
+              }}
+              countryCode="ma"
+              className="cursor-pointer"
+              onClick={() => {
+                changeLanguages("ar");
+                setDir("rtl");
+              }}
             />
           </div>
         </div>

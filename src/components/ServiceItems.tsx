@@ -4,7 +4,7 @@ import ServiceModule from "./_modules/ServiceModule";
 
 function ServiceItems({ service }: { service: TService }) {
   const [t] = useTranslation('global');
-  const lg: "en" | "fr" = t("value");
+  const lg: "en" | "fr" | 'ar' = t("value");
   return (
     <div className="flex  flex-col w-[320px] h-[350px] justify-between gap-y-4  no-scrollbar hover:border shadow-2xl rounded-lg p-4">
       <div className="flex flex-col  gap-y-2">

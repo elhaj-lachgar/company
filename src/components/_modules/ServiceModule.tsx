@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 function ServiceModule({ service }: { service: TService }) {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const [t] = useTranslation("global");
-  const lg: "en" | "fr" = t("value");
+  const lg: "en" | "fr" | 'ar' = t("value");
 
 
   return (
@@ -44,10 +44,10 @@ function ServiceModule({ service }: { service: TService }) {
               <h2 className="w-full font-medium ml-2">{service.name[lg]}</h2>
             </div>
             <div className="flex flex-col gap-y-1">
-              <h2 className="text-xl font-semibold">Description :</h2>
+              <h2 className="text-xl font-semibold">{t("element.prdesc")} :</h2>
               <div className="overflow-auto italic gap-y-2 flex flex-col  h-[100px] no-scrollbar border  p-2 bg-gray-100 rounded-xl ">
                 {service.description[lg].map((description) => (
-                  <p>{"-  " + description}</p>
+                  <p key={service.description.en[0]}>{"-  " + description}</p>
                 ))}
               </div>
             </div>

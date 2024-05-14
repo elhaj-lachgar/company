@@ -23,7 +23,10 @@
     "element" :{
         "btn" : "Read More",
         "title" : "Title of Service",
-        "prtitle" : "Title of Project"
+        "prtitle" : "Title of Project",
+        "prdesc" : "description",
+        "visit" : "visit",
+        "seeCode" : "see code"
     },
     "value" : "en"
 }
