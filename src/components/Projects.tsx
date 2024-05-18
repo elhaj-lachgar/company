@@ -11,8 +11,8 @@ function Projects() {
       <h1 className="text-4xl ">{t("projects.title")}</h1>
       <hr className="w-24 h-1 mx-auto my-4 md:my-6 bg-white border-0 rounded  dark:bg-blue-400" />
       <div className="flex flex-wrap gap-8 justify-center px-5 py-4 my-4">
-        {PROJECT_ITEMS.map((item) => (
-          <ProjectItem project={item} key={item.name[lg]} />
+        {PROJECT_ITEMS.map((item , index) => (
+          <ProjectItem project={item} index={index} key={item.name[lg]} />
         ))}
       </div>
     </div>

@@ -2,26 +2,35 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  Button,
   useDisclosure,
 } from "@chakra-ui/react";
 import { TService } from "../../constant/types";
 import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useDirectionContext } from "../../context/DirectionContextProvider";
+import { motion } from "framer-motion";
 
 function ServiceModule({ service }: { service: TService }) {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const [t] = useTranslation("global");
-  const lg: "en" | "fr" | 'ar' = t("value");
-
+  const lg: "en" | "fr" | "ar" = t("value");
+  const { dir } = useDirectionContext();
 
   return (
     <>
-      <Button colorScheme="blue" onClick={onOpen}>
+      <motion.button
+        initial={{ opacity: 0.9 }}
+        whileHover={{
+          scale: 1.05,
+          opacity: 1,
+        }}
+        className="text-white rounded-md bg-blue-500 p-2"
+        onClick={onOpen}
+      >
         {t("element.btn")}
-      </Button>
+      </motion.button>
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+        <ModalOverlay dir={dir} />
         <ModalContent>
           <div className="flex justify-between px-5 py-4 text-lg font-medium h-fit">
             {service.name[lg].length < 20
@@ -45,7 +54,7 @@ function ServiceModule({ service }: { service: TService }) {
             </div>
             <div className="flex flex-col gap-y-1">
               <h2 className="text-xl font-semibold">{t("element.prdesc")} :</h2>
-              <div className="overflow-auto italic gap-y-2 flex flex-col  h-[100px] no-scrollbar border  p-2 bg-gray-100 rounded-xl ">
+              <div className="overflow-auto italic gap-y-2 flex flex-col  min-h-[100px] no-scrollbar border  p-2 bg-gray-100 rounded-xl ">
                 {service.description[lg].map((description) => (
                   <p key={service.description.en[0]}>{"-  " + description}</p>
                 ))}

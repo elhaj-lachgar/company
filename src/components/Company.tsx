@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 
 function Company() {
   const [t] = useTranslation("global");
+
   return (
     <motion.div
       id="about"

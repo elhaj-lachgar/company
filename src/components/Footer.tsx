@@ -1,9 +1,21 @@
 import { Default_Social } from "../constant";
+import { motion } from "framer-motion";
+
 import Logo from "./Logo";
 
 function Footer() {
+
   return (
-    <footer
+    <motion.footer
+      initial={{
+        opacity: 0,
+      }}
+      transition={{
+        duration: 0.95,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
       id="contact"
       className="flex flex-col py-5  gap-y-3  w-full bg-gray-50 border"
     >
@@ -11,19 +23,31 @@ function Footer() {
         <Logo />
         <h1
           className={`text-[#008FD5] font-bold  text-border-dark-optional
-              text-xl md:text-2xl flex gap-x-2 items-center`}
+              text-xl md:text-2xl flex gap-x-1 items-center`}
         >
-          Brothers Tech
+          Brother Tech
         </h1>
         <div className="flex gap-x-4 lg:gap-x-8 items-center">
-          {Default_Social.map((ele) => (
-            < a href={ele.href} key={ele.href}  target="_blank">
-              <img
-                src={ele.img}
-                alt="social"
-                className="w-11 h-11 "
-              />
-            </a>
+          {Default_Social.map((ele, index) => (
+            <motion.a
+              initial={{
+                opacity: 0,
+                x: 20,
+              }}
+              transition={{
+                duration: 0.2,
+                delay: 0.2 * index,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              href={ele.href}
+              key={ele.href}
+              target="_blank"
+            >
+              <img src={ele.img} alt="social" className="w-10 h-10 bg-gray-50 " />
+            </motion.a>
           ))}
         </div>
       </div>
@@ -48,7 +72,7 @@ function Footer() {
           </span>
         </p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

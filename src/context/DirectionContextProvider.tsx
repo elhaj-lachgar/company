@@ -6,7 +6,7 @@ type TDirectionContext = {
 };
 
 const DirectionContext = createContext<TDirectionContext>({
-  dir: "ltr",
+  dir: "rtl",
   setDir: () => {},
 });
 

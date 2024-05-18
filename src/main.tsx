@@ -15,7 +15,7 @@ i18next.init({
   interpolation: {
     escapeValue: true,
   },
-  lng: "en",
+  lng: "fr",
   resources: {
     en: {
       global: en,
@@ -35,7 +35,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <I18nextProvider i18n={i18next}>
         <DirectionContextProvider>
-          <ChakraProvider>
+          <ChakraProvider >
             <App />
           </ChakraProvider>
         </DirectionContextProvider>

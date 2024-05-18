@@ -2,25 +2,33 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  Button,
   useDisclosure,
   ModalFooter,
 } from "@chakra-ui/react";
 import { TProject } from "../../constant/types";
 import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 function ProjectModule({ project }: { project: TProject }) {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const [t] = useTranslation("global");
 
-  const lg: "en" | "fr" | 'ar' = t("value");
+  const lg: "en" | "fr" | "ar" = t("value");
 
   return (
     <>
-      <Button colorScheme="blue" onClick={onOpen}>
+      <motion.button
+        initial={{ opacity: 0.9 }}
+        whileHover={{
+          scale: 1.05,
+          opacity: 1,
+        }}
+        className="text-white rounded-md bg-blue-500 p-2"
+        onClick={onOpen}
+      >
         {t("element.btn")}
-      </Button>
+      </motion.button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
@@ -47,10 +55,8 @@ function ProjectModule({ project }: { project: TProject }) {
               <h2 className="w-full font-medium ">{project.name[lg]}</h2>
             </div>
             <div className="flex flex-col gap-y-1 w-full">
-              <h2 className="text-xl font-semibold">
-              {t("element.prdesc")} :
-              </h2>
-              <div className="overflow-auto italic no-scrollbar  border  p-2 bg-gray-100 rounded-xl  ">
+              <h2 className="text-xl font-semibold">{t("element.prdesc")} :</h2>
+              <div className="overflow-auto italic no-scrollbar min-h-[150px] border  p-2 bg-gray-100 rounded-xl  ">
                 - {" " + project.description[lg]}
               </div>
             </div>
@@ -62,14 +68,14 @@ function ProjectModule({ project }: { project: TProject }) {
                 className="p-2 rounded  bg-blue-500 text-white capitalize"
                 target="_blank"
               >
-                {t('element.visit')}
+                {t("element.visit")}
               </a>
               <a
                 href={project.details.code}
                 className="p-2 bg-green-500 rounded text-white capitalize"
                 target="_blank"
               >
-                {t('element.seeCode')}
+                {t("element.seeCode")}
               </a>
             </ModalFooter>
           )}

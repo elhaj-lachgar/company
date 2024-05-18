@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import OurWork from "./components/OurServices";
 import Projects from "./components/Projects";
 import { ArrowUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useDirectionContext } from "./context/DirectionContextProvider";
 
 function App() {
@@ -39,17 +39,32 @@ function App() {
       <OurWork />
       <Projects />
       <Footer />
-      {scrollTop && (
-        <motion.div
-          className="fixed top-[80%]  cursor-pointer flex items-center justify-center right-[3%] w-11 h-11 rounded-full bg-blue-700 text-white"
-          onClick={scrollTopHandler}
-          transition={{
-            duration: 1,
-          }}
-        >
-          <ArrowUp />
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {scrollTop && (
+          <motion.div
+            layout
+            className="fixed top-[80%]  cursor-pointer flex items-center justify-center right-[3%] w-11 h-11 rounded-full bg-blue-700 text-white"
+            onClick={scrollTopHandler}
+            initial={{
+              opacity: 0,
+              scale: 0,
+            }}
+            transition={{
+              duration: 0.75,
+            }}
+            whileTap={{
+              opacity: 0,
+              scale: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+          >
+            <ArrowUp />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
