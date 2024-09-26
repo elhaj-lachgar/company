@@ -276,6 +276,22 @@ export const PROJECT_ITEMS = [
     },
     img: "/capabilities/tele.png",
   },
+  {
+    name: {
+      ar: "منتوجات تعاونية ساجا",
+      fr: " Produits de la Coopérative Saja",
+      en: "Saja Cooperative Products",
+    },
+    description: {
+      ar: "تقدم تعاونية ساجا مجموعة متنوعة من المنتجات الطبيعية عالية الجودة، التي تُصنع بعناية وإخلاص على يد حرفيين محليين. يوفر موقعنا الإلكتروني تجربة تسوق سهلة وممتعة، حيث يمكنك اكتشاف مجموعة من المنتجات العضوية والصديقة للبيئة، بما في ذلك منتجات العناية بالبشرة، والزيوت الأساسية، والصابون المصنوع يدويًا، وغيرها الكثير. يتم تصنيع كل منتج باستخدام طرق تقليدية ومن مصادر مستدامة لتعزيز الصحة والرفاهية مع احترام البيئة. استكشف مجموعتنا وادعم تعاونية تُمكّن المجتمعات المحلية وتقدم أفضل ما في الطبيعة.",
+      fr: "La Coopérative Saja propose une gamme de produits naturels de haute qualité, fabriqués avec soin et dévouement par des artisans locaux. Notre site web offre une expérience d'achat simple et agréable où vous pouvez découvrir une variété d'articles biologiques et respectueux de l'environnement, notamment des produits de soin de la peau, des huiles essentielles, des savons faits à la main, et bien plus encore. Chaque produit est fabriqué selon des méthodes traditionnelles et provient de sources durables afin de promouvoir la santé, le bien-être et le respect de l'environnement. Explorez notre collection et soutenez une coopérative qui valorise les communautés locales tout en offrant le meilleur de la nature.",
+      en: "Saja Cooperative offers a range of high-quality natural products, crafted with care and dedication by local artisans. Our website provides an easy and enjoyable shopping experience where you can discover a variety of organic and eco-friendly items, including skincare products, essential oils, handmade soaps, and more. Each product is made using traditional methods and sourced sustainably to promote health, well-being, and respect for the environment. Explore our collection and support a cooperative that empowers local communities while delivering the best nature has to offer.",
+    },
+    img: "/projects/honney.png",
+    details: {
+      viste: "https://honney-780l.onrender.com/",
+    },
+  },
 ];
 
 export const CAPABILITIE_ITEMS = [

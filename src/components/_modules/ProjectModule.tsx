@@ -70,13 +70,15 @@ function ProjectModule({ project }: { project: TProject }) {
               >
                 {t("element.visit")}
               </a>
-              <a
-                href={project.details.code}
-                className="p-2 bg-green-500 rounded text-white capitalize"
-                target="_blank"
-              >
-                {t("element.seeCode")}
-              </a>
+              {project.details?.code && (
+                <a
+                  href={project.details.code}
+                  className="p-2 bg-green-500 rounded text-white capitalize"
+                  target="_blank"
+                >
+                  {t("element.seeCode")}
+                </a>
+              )}
             </ModalFooter>
           )}
         </ModalContent>
