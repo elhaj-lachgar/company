@@ -26,6 +26,6 @@ export type TProject = {
   img: string;
   details?: {
     viste: string;
-    code: string;
+    code?: string;
   };
 };
